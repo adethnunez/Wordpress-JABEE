@@ -22,6 +22,8 @@
               'theme_location' => 'header_menu',
             ))
               ?>
+
+              <button class="btnCart"><i class="fa-solid fa-cart-shopping"></i> <span class="counter"></span></button>
           </div>
         </div>
       </div>

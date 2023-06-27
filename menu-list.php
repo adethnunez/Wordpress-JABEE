@@ -5,6 +5,7 @@
 <?php get_header ()?>
 
 <?php if (have_posts()) : while(have_posts()) :the_post() ?>
+<?php $category = get_field('category'); ?>
 <section class="single__header text--center py--2">
       <div class="wrapper">
         <h1 class="clr--accent"><?php the_title() ?></h1>
@@ -23,18 +24,18 @@
     <section class="list">
       <div class="container">
         <div class="list__grid">
-        <?php $chickenjoy = new WP_Query(array(
+        <?php $menu = new WP_Query(array(
             'post_type' => 'foods',
             'meta_query' => array(
                 array(
                     'key' => 'category',
-                    'value' => 'ChickenJoy',
+                    'value' => $category,
                     'compare' => 'LIKE',
                 )
             )
 
           )) ?>
-            <?php if ($chickenjoy->have_posts()) : while($chickenjoy->have_posts()) : $chickenjoy->the_post() ?>
+            <?php if ($menu->have_posts()) : while($menu->have_posts()) : $menu->the_post() ?>
           <div class="card">
             <div class="card__wrapper">
             <img src="<?php echo get_field('image') ?>" alt="" />

@@ -5,7 +5,7 @@
         <div class="food__header flex justify--between align--center">
           <h2>Best Seller</h2>
           <span></span>
-          <a href="#">View All</a>
+          <a href="<?php echo site_url('/bestseller')?>">View All</a>
         </div>
       </div>
       <div class="container with--overflow">
@@ -32,14 +32,20 @@
                 </figure>
                 <div class="content bg--accent text--center clr--light">
 
-                    <a href="<?php the_permalink()?>"><h4><?php the_title(); ?></h4></a>
+                    <a href="<?php the_permalink()?>">
+                  <h4>
 
+                    <?php the_title(); ?></a>
+                  </h4>
+                  </a>
+                  
                 </div>
                 <div class="price">
                   <p>Start at <br /><span> <?php the_field('price')?> </span></p>
-                  <p><span> <?php the_field('category')?></p>
+                  <!-- <p><span> <?php the_field('category')?></p> -->
                 </div>
               </div>
+              <button class="btnAddtoCart">Add to Cart</button>
             </div>
 
             <?php endwhile;
@@ -57,7 +63,7 @@
         <div class="food__header flex justify--between align--center">
           <h2>Chicken Joy</h2>
           <span></span>
-          <a href="#">View All</a>
+          <a href="<?php echo site_url('/Chicken Joy')?>">View All</a>
         </div>
       </div>
       <div class="container with--overflow">
@@ -93,7 +99,7 @@
                 </div>
                 <div class="price">
                   <p>Start at <br /><span> <?php the_field('price')?> </span></p>
-                  <p><span> <?php the_field('category')?></p>
+                  <!-- <p><span> <?php the_field('category')?></p> -->
                 </div>
               </div>
             </div>
@@ -148,7 +154,7 @@
                 </div>
                 <div class="price">
                   <p>Start at <br /><span> <?php the_field('price')?> </span></p>
-                  <p><span> <?php the_field('category')?></p>
+                  <!-- <p><span> <?php the_field('category')?></p> -->
                 </div>
               </div>
             </div>
@@ -204,7 +210,7 @@
                 </div>
                 <div class="price">
                   <p>Start at <br /><span> <?php the_field('price')?> </span></p>
-                  <p><span> <?php the_field('category')?></p>
+                  <!-- <p><span> <?php the_field('category')?></p> -->
                 </div>
               </div>
             </div>
@@ -220,138 +226,36 @@
 
 
 
-
-<!-- 
-            <div class="food__slider__wrapper">
-              <div class="inner">
-                <figure>
-                  <img src="./images/hamburger.png" alt="" />
-                </figure>
-                <div class="content bg--accent text--center clr--light">
-                  <h4>
-                    8 - pc. Chickenjoy Bucket w/ Jolly Spaghetti Family Pan
-                  </h4>
-                </div>
-                <div class="price">
-                  <p>Start at <br /><span>850</span></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="food__slider__wrapper">
-              <div class="inner">
-                <figure>
-                  <img src="./images/hamburger.png" alt="" />
-                </figure>
-                <div class="content bg--accent text--center clr--light">
-                  <h4>
-                    8 - pc. Chickenjoy Bucket w/ Jolly Spaghetti Family Pan
-                  </h4>
-                </div>
-                <div class="price">
-                  <p>Start at <br /><span>850</span></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="food__slider__wrapper">
-              <div class="inner">
-                <figure>
-                  <img src="./images/hamburger.png" alt="" />
-                </figure>
-                <div class="content bg--accent text--center clr--light">
-                  <h4>
-                    8 - pc. Chickenjoy Bucket w/ Jolly Spaghetti Family Pan
-                  </h4>
-                </div>
-                <div class="price">
-                  <p>Start at <br /><span>850</span></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="food__slider__wrapper">
-              <div class="inner">
-                <figure>
-                  <img src="./images/hamburger.png" alt="" />
-                </figure>
-                <div class="content bg--accent text--center clr--light">
-                  <h4>
-                    8 - pc. Chickenjoy Bucket w/ Jolly Spaghetti Family Pan
-                  </h4>
-                </div>
-                <div class="price">
-                  <p>Start at <br /><span>850</span></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="food__slider__wrapper">
-              <div class="inner">
-                <figure>
-                  <img src="./images/hamburger.png" alt="" />
-                </figure>
-                <div class="content bg--accent text--center clr--light">
-                  <h4>
-                    8 - pc. Chickenjoy Bucket w/ Jolly Spaghetti Family Pan
-                  </h4>
-                </div>
-                <div class="price">
-                  <p>Start at <br /><span>850</span></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="food__slider__wrapper">
-              <div class="inner">
-                <figure>
-                  <img src="./images/hamburger.png" alt="" />
-                </figure>
-                <div class="content bg--accent text--center clr--light">
-                  <h4>
-                    8 - pc. Chickenjoy Bucket w/ Jolly Spaghetti Family Pan
-                  </h4>
-                </div>
-                <div class="price">
-                  <p>Start at <br /><span>850</span></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="food__slider__wrapper">
-              <div class="inner">
-                <figure>
-                  <img src="./images/hamburger.png" alt="" />
-                </figure>
-                <div class="content bg--accent text--center clr--light">
-                  <h4>
-                    8 - pc. Chickenjoy Bucket w/ Jolly Spaghetti Family Pan
-                  </h4>
-                </div>
-                <div class="price">
-                  <p>Start at <br /><span>850</span></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="food__slider__wrapper">
-              <div class="inner">
-                <figure>
-                  <img src="./images/hamburger.png" alt="" />
-                </figure>
-                <div class="content bg--accent text--center clr--light">
-                  <h4>
-                    8 - pc. Chickenjoy Bucket w/ Jolly Spaghetti Family Pan
-                  </h4>
-                </div>
-                <div class="price">
-                  <p>Start at <br /><span>850</span></p>
-                </div>
-              </div>
-            </div> -->
+          <div class="cart">
+            <h3>Cart</h3>
+            <button class="cart_close"><i class= "fas fa-times"></i></button>
+            <div class="cart__wrapper">
           </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- </div>
         </div>
       </div>
-    </section>
+    </section> -->
   
 <?php get_footer() ?>
